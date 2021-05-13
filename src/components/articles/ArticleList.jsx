@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Article from './Article';
 
 function ArticleList({ articles }) {
-  return articles.map((article) => {
+  return articles.map((article, i) => {
     return (
-      <li key={article.title}>
+      <li key={article.title + i}>
         <Article {...article} />;
       </li>
     );

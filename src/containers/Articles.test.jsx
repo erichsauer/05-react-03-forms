@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Articles from './Articles';
 
@@ -19,6 +19,10 @@ describe('article search app', () => {
 
     const button = await screen.findByRole('button', { name: 'search' });
     userEvent.click(button);
-    expect(ul).not.toBeEmptyDOMElement;
+
+    return waitFor(async () => {
+      const ul = await screen.findByRole('list', { name: 'articles' });
+      expect(ul).not.toBeEmptyDOMElement();
+    });
   });
 });
