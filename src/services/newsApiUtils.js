@@ -1,7 +1,5 @@
 const URL = 'https://newsapi.org/v2/';
-const KEY = '6fc3037a9f8943fc97f328277bb6338e';
-
-// everything?q=Apple&from=2021-05-13&sortBy=popularity&apiKey=API_KEY
+const KEY = process.env.KEY;
 
 export const getArticles = async (query) => {
   let res;
