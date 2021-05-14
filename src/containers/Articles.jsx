@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ArticleList from '../components/articles/ArticleList';
-import Controls from '../components/articles/controls';
+import Controls from '../components/articles/Controls';
 import { getArticles } from '../services/newsApiUtils';
 
 export default class Articles extends Component {
