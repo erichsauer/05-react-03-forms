@@ -5,7 +5,7 @@ export const getArticles = async (query) => {
   let res;
   if (query) {
     res = await fetch(
-      `${URL}everything?q=Apple&from=2021-05-13&sortBy=popularity&apiKey=${KEY}`
+      `${URL}everything?q=${query}&from=2021-05-13&sortBy=popularity&apiKey=${KEY}`
     );
   } else {
     res = await fetch(`${URL}top-headlines?country=us&apiKey=${KEY}`);
